@@ -1,0 +1,355 @@
+/* Reset styles for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Variables for colors and fonts */
+:root {
+  --primary-color: #0066cc;
+  --primary-color-dark: #0055b3;
+  --secondary-color: #333;
+  --secondary-color-light: #ccc;
+  --error-color: #e74c3c;
+  --success-color: #2ecc71;
+  --background-color: #f2f2f2;
+  --text-color: #333;
+  --font-family: Arial, sans-serif;
+}
+
+/* Global styles for the body and links */
+body {
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: var(--background-color);
+  text-align: left;
+}
+
+h1, h2, h3, p {
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+.button:hover, .button:focus {
+  background-color: var(--primary-color-dark);
+}
+
+input:focus, textarea:focus {
+  outline: 3px solid var(--primary-color-dark);
+  outline-offset: 3px;
+  border-color: var(--primary-color-dark);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Styles for the header and navigation */
+header {
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  padding: 0 1rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin-right: 1rem;
+}
+
+nav a {
+  color: #fff;
+}
+
+nav a:hover, nav a:focus {
+  color: var(--secondary-color-light);
+}
+
+/* Styles for the main content */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+section {
+  flex-basis: calc(100% - 2rem);
+  margin-bottom: 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+section p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+section a.button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+/* Styles for the items list */
+.items-list {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.list-item {
+  flex-basis: calc(33.33% - 2rem);
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.list-item__image {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.list-item__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.list-item__body h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.list-item__body p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* Styles for the video section */
+#videos {
+  text-align: center;
+}
+
+#videos video {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+/* Styles for the contact section */
+#contact {
+  flex-basis: calc(100% - 2rem);
+  margin-bottom: 2rem;
+}
+
+#contact h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+#contact form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+#contact .form-control {
+  width: 100%;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+#contact label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+#contact textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+#contact input[type="submit"] {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+#contact input[type="submit"]:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.form-control.error input,
+.form-control.error textarea {
+  border-color: var(--error-color);
+}
+
+.form-control.success input,
+.form-control.success textarea {
+  border-color: var(--success-color);
+}
+
+.form-control small {
+  color: var(--error-color);
+  visibility: hidden;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+/* Styles for the parallax effect */
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.6);
+}
+
+.parallax-content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home__parallax {
+  height: 100%;
+  min-height: 400px;
+}
+
+.home__parallax .parallax-content {
+  color: #fff;
+}
+
+.home__parallax .parallax-content h1 {
+  font-size: 2.5rem;
+}
+
+/* Styles for footer */
+footer {
+  background-color: var(--secondary-color);
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .list-item {
+    flex-basis: calc(50% - 2rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .list-item {
+    flex-basis: calc(100% - 2rem);
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav li {
+    margin-bottom: 1rem;
+  }
+}
+
+
+
+
+
